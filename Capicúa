@@ -1,0 +1,28 @@
+#include "stdax.h"
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+  int x;
+  int y;
+  int aux;
+  int n;
+  int s=0;
+  cout<<"Ingrese numero entero"<<endl;
+  cin>>n;
+  aux=n;
+  while (n>0)
+  {
+    x=n%10;;
+    y=(x+y)*10;
+    n=n/10;
+  }
+  if ((y/10)==aux)
+    cout<<"El número es capiúa"<<endl;
+  else
+    cout<<"No es capicúa"<<endl;
+    
+  return 0;
+}
