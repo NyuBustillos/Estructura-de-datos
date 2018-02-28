@@ -7,7 +7,6 @@ int main ()
 {
   int x;
   int n;
-  int s=0;
   cout<<"Ingrese numero entero"<<endl;
   cin>>n;
   cout<<"El número invertido es: "<<endl;
