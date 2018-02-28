@@ -19,5 +19,5 @@ int main ()
   cout<<"La suma de sus dígitos es"<<endl;
   cout<<s;
   
-  return 0,
+  return 0;
 }
