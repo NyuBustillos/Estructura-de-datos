@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+  int x;
+  int n;
+  int s=0;
+  cout<<"Ingrese numero entero"<<endl;
+  cin>>n;
+  cout<<"El número invertido es: "<<endl;
+  while (n>0)
+  {
+    x=n%10;
+    cout<<x;
+    n=n/10;
+  }
+  
+  return 0;
+}
