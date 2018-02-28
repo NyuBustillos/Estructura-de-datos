@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+  int x;
+  int n;
+  cout<<"Ingrese numero entero"<<endl;
+  cin>>n;
+  while (n>0)
+  {
+    x=n%10;
+    if (x>=8)
+    {
+      cout<<x;
+      cout<<" No pertenece a base ocho"<<endl;
+    }
+    n=n/10;
+  }
+  return 0;
+}
