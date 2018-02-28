@@ -1,0 +1,23 @@
+#include "stdax.h"
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+  int x;
+  int n;
+  int s=0;
+  cout<<"Ingrese numero entero"<<endl;
+  cin>>n;
+  while (n>0)
+  {
+    x=n%10;
+    s=s+x;
+    n=n/10;
+  }
+  cout<<"La suma de sus dígitos es"<<endl;
+  cout<<s;
+  
+  return 0,
+}
