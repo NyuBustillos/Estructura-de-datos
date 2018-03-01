@@ -1,0 +1,31 @@
+#include "stdax.h"
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+  int x;
+  int n;
+  int b;
+  cout<<"Ingrese numero entero"<<endl;
+  cin>>n;
+  while (n>0)
+  {
+    x=n%10;
+    if (x!=9)
+    {
+        b=(9-x);
+        cout<<"Complemento 9 de "<<x<<" es: ";
+        cout<<b<<endl;
+    }
+    else
+    {
+        cout<<"Complemento 9 de "<<x<<" es: ";
+        cout<<"0"<<endl;
+    }
+    n=n/10;
+  }
+  return 0;
+}
+
