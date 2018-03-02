@@ -1,0 +1,65 @@
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+int pares (int n);
+int octal (int n);
+int main()
+{
+  int a;
+  int n;
+  do 
+  {
+    cout<<"Elija una opcion"<<endl;
+    cout<<"1. Pares"<<endl;
+    cout<<"2. Octal"<<endl;
+    cout<<"0. Salir"<<endl;
+    cin>>a;
+    switch (a)
+    {
+      case 1: cout<<"Ingrese Numero"<<endl;
+              cin>>n;
+              pares(n);
+      break;
+      case 2: cout<<"Ingrese Numero"<<endl;
+              cin>>n;
+              octal(n);
+      break;
+      case 0: break;
+      default: cout<<"Ingrese opcion valida"<<endl;
+    }
+  }
+ while(a!=0);
+}
+int pares (int n)
+{
+  int x;
+  int p = 0;
+  while (n > 0)
+  {
+    x = n % 10;
+    if (x % 2 == 0)
+    {
+      cout << x;
+	    cout << "Es dígito es par" << endl;
+	    p++;
+     }
+     n = n / 10;
+  }
+  cout << "Cantidad de números pares: " << endl;
+  cout << p<< endl;
+}
+int octal (int n)
+{
+  int x;
+  while (n > 0)
+  {
+    x = n % 10;
+    if (x >= 8)
+    {
+	    cout << x;
+	    cout << " No pertenece a base ocho" << endl;
+     }
+     n = n / 10;
+   }
+}
