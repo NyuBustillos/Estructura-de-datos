@@ -1,0 +1,69 @@
+_______CLASE_______
+
+#pragma once
+
+class EcCuadra
+{ private:
+  int a;
+  int b;
+  int c;
+public:
+	EcCuadra(void);
+	~EcCuadra(void);
+	void ecuacion(int A,int B,int C);
+};
+
+#include "StdAfx.h"
+#include "EcCuadra.h"
+#include <math.h>
+#include <iostream>
+using namespace std;
+//primer .cpp de las funciones
+EcCuadra::EcCuadra(void)
+{
+}
+
+
+EcCuadra::~EcCuadra(void)
+{
+}
+void EcCuadra::ecuacion(int A,int B,int C)
+{int D,R,r,x,x1;
+ D=(B*B)-(4*A*C);
+ R=sqrt(D);
+ 
+ if(r<0)
+ {cout<<"No se puede hallar una solucion en el conjunto de los reales"<<endl;
+ }
+ else
+ {x=(-B+R)/2*A;
+  x1=(-B-R)/2*A;
+  cout<<"los resultados son: X1= "<<x<<" y X2= "<<x1;
+ }
+
+}
+
+// EcCuadr.cpp : Defines the entry point for the console application.
+//
+______ PRINCIPAL__________
+#include "stdafx.h"
+#include "EcCuadra.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+
+
+void main ()
+{	EcCuadra cuadrat1;
+	int a,b,c;
+	cout<<"INGRESE DATOS"<<endl;
+	cout<<"Ingrese A: "<<endl;
+	cin>>a;
+	cout<<"Ingrese B: "<<endl;
+	cin>>b;
+	cout<<"Ingrese C: "<<endl;
+	cout<<"El resultado es: "<<endl;
+	cout<<cuadrat1.ecuacion(a,b,c);
+	_getch();
+}
