@@ -1,0 +1,55 @@
+//*Clase
+#pragma once
+class sueldos
+{	private:
+	int empleados;
+	float horas;
+	float pago;
+	float sueldo;
+public:
+	sueldos(void);
+	~sueldos(void);
+	float calculo_sueldo(int e,float h,float p);
+};
+
+//* Principal
+
+#include "stdafx.h"
+#include "sueldos.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+void main ()
+{sueldos sueldo1;
+ int emp,hora,pago;
+ cout << "Ingrese el numero de empleados: " << endl;
+ cin >> emp;
+ cout << "Ingrese horas trabajadas: " << endl;
+ cin >> hora;
+ cout << "Ingrese el pago por hora: " << endl;
+ cin >> pago;
+ cout<<"El sueldo es: "<<sueldo1.calculo_sueldo(emp,hora,pago);
+ _getch ();
+	
+}
+
+
+
+sueldos::sueldos(void)
+{
+}
+
+
+sueldos::~sueldos(void)
+{
+}
+float sueldos::calculo_sueldo(int e,float h,float p)
+{float i=0.13,a;
+	for (int a=1;a<=e;a++) 
+	{	
+		sueldo = (h*p)-((h*p)*i);
+	}
+	return sueldo;
+}
