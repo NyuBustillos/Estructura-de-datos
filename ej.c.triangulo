@@ -1,0 +1,52 @@
+//* Clase
+
+#pragma once
+class Triiangulos
+{	private:
+	float base;
+	float altura;
+	float area;
+
+	public:
+	Triiangulos(void);
+	~Triiangulos(void);
+	float calcular_area(float b,float h);
+};
+
+//*Principal
+
+#include "stdafx.h"
+#include "Triiangulos.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+void main ()
+{Triiangulos triangulo1;
+ float a,b;
+ cout <<"Ingrese su base: "<<endl;
+ cin>>a;
+ cout<<"Ingrese su altura: "<<endl;
+ cin>>b;
+ cout<<"La suma es: "<<triangulo1.calcular_area(a,b);
+ getch();
+	
+}
+
+
+
+Triiangulos::Triiangulos(void)
+{
+}
+
+
+Triiangulos::~Triiangulos(void)
+{
+}
+
+float Triiangulos::calcular_area(float b,float h)
+{area=(b*h)/2;
+ return area;
+}
